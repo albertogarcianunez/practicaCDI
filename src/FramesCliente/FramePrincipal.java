@@ -35,6 +35,7 @@ public class FramePrincipal extends javax.swing.JFrame {
 
         panelFrame = new javax.swing.JPanel();
         botonInicio = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1080, 720));
@@ -44,6 +45,7 @@ public class FramePrincipal extends javax.swing.JFrame {
         panelFrame.setMaximumSize(new java.awt.Dimension(1080, 720));
         panelFrame.setMinimumSize(new java.awt.Dimension(1080, 720));
         panelFrame.setPreferredSize(new java.awt.Dimension(1080, 720));
+        panelFrame.setLayout(null);
 
         botonInicio.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
         botonInicio.setText("¡Qué aproveche!");
@@ -52,23 +54,12 @@ public class FramePrincipal extends javax.swing.JFrame {
                 botonInicioActionPerformed(evt);
             }
         });
+        panelFrame.add(botonInicio);
+        botonInicio.setBounds(340, 565, 400, 100);
 
-        javax.swing.GroupLayout panelFrameLayout = new javax.swing.GroupLayout(panelFrame);
-        panelFrame.setLayout(panelFrameLayout);
-        panelFrameLayout.setHorizontalGroup(
-            panelFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelFrameLayout.createSequentialGroup()
-                .addContainerGap(340, Short.MAX_VALUE)
-                .addComponent(botonInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(340, 340, 340))
-        );
-        panelFrameLayout.setVerticalGroup(
-            panelFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelFrameLayout.createSequentialGroup()
-                .addContainerGap(565, Short.MAX_VALUE)
-                .addComponent(botonInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(55, 55, 55))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/FramesCliente/imagenes/fondoPrincipal.png"))); // NOI18N
+        panelFrame.add(jLabel1);
+        jLabel1.setBounds(0, 0, 1080, 720);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -147,6 +138,7 @@ public class FramePrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonInicio;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel panelFrame;
     // End of variables declaration//GEN-END:variables
 }

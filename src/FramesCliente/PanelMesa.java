@@ -66,10 +66,12 @@ public class PanelMesa extends javax.swing.JPanel {
         jSlider1 = new javax.swing.JSlider();
         labelTemperatura = new javax.swing.JLabel();
         labelGrados = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setMaximumSize(new java.awt.Dimension(1080, 720));
         setMinimumSize(new java.awt.Dimension(1080, 720));
         setPreferredSize(new java.awt.Dimension(1080, 720));
+        setLayout(null);
 
         jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.setMaximumSize(new java.awt.Dimension(100, 400));
@@ -135,6 +137,9 @@ public class PanelMesa extends javax.swing.JPanel {
                 .addComponent(bajarAltura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
+        add(jPanel1);
+        jPanel1.setBounds(30, 170, 100, 400);
+
         botonVolver.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         botonVolver.setText("Volver");
         botonVolver.setMaximumSize(new java.awt.Dimension(100, 75));
@@ -145,6 +150,8 @@ public class PanelMesa extends javax.swing.JPanel {
                 botonVolverActionPerformed(evt);
             }
         });
+        add(botonVolver);
+        botonVolver.setBounds(30, 615, 100, 75);
 
         botonInformacion.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
         botonInformacion.setText("i");
@@ -156,12 +163,20 @@ public class PanelMesa extends javax.swing.JPanel {
                 botonInformacionActionPerformed(evt);
             }
         });
+        add(botonInformacion);
+        botonInformacion.setBounds(30, 30, 100, 100);
 
         botonCubiertos.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        botonCubiertos.setText("Cambiar Cubiertos");
+        botonCubiertos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/FramesCliente/imagenes/Cubiertos.png"))); // NOI18N
+        botonCubiertos.setBorder(null);
+        botonCubiertos.setBorderPainted(false);
+        botonCubiertos.setContentAreaFilled(false);
+        botonCubiertos.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         botonCubiertos.setMaximumSize(new java.awt.Dimension(150, 456));
         botonCubiertos.setMinimumSize(new java.awt.Dimension(150, 456));
         botonCubiertos.setPreferredSize(new java.awt.Dimension(150, 456));
+        add(botonCubiertos);
+        botonCubiertos.setBounds(878, 234, 150, 456);
 
         botonCambioPlato.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         botonCambioPlato.setText("Pasar al siguiente plato");
@@ -173,12 +188,16 @@ public class PanelMesa extends javax.swing.JPanel {
                 botonCambioPlatoActionPerformed(evt);
             }
         });
+        add(botonCambioPlato);
+        botonCambioPlato.setBounds(258, 234, 490, 225);
 
         botonPedirBebida.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         botonPedirBebida.setText("Pedir Bebida");
         botonPedirBebida.setMaximumSize(new java.awt.Dimension(185, 90));
         botonPedirBebida.setMinimumSize(new java.awt.Dimension(185, 90));
         botonPedirBebida.setPreferredSize(new java.awt.Dimension(185, 90));
+        add(botonPedirBebida);
+        botonPedirBebida.setBounds(696, 30, 185, 90);
 
         botonCambioVaso.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         botonCambioVaso.setText("Solicitar Cambio de Vaso");
@@ -190,6 +209,8 @@ public class PanelMesa extends javax.swing.JPanel {
                 botonCambioVasoActionPerformed(evt);
             }
         });
+        add(botonCambioVaso);
+        botonCambioVaso.setBounds(696, 126, 185, 90);
 
         panelTemperatura.setMaximumSize(new java.awt.Dimension(490, 225));
         panelTemperatura.setMinimumSize(new java.awt.Dimension(490, 225));
@@ -251,61 +272,12 @@ public class PanelMesa extends javax.swing.JPanel {
                 .addContainerGap(57, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(botonVolver, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(botonInformacion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 128, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(botonCambioPlato, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(panelTemperatura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(130, 130, 130)
-                                .addComponent(botonCubiertos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(52, 52, 52))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(botonCambioVaso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(botonPedirBebida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(199, 199, 199))))))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(botonInformacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(40, 40, 40)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(botonVolver, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(30, Short.MAX_VALUE)
-                        .addComponent(botonPedirBebida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(botonCambioVaso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(botonCambioPlato, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(panelTemperatura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0))
-                            .addComponent(botonCubiertos, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(30, 30, 30))
-        );
+        add(panelTemperatura);
+        panelTemperatura.setBounds(258, 465, 490, 225);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/FramesCliente/imagenes/fondoPrincipal.png"))); // NOI18N
+        add(jLabel3);
+        jLabel3.setBounds(0, 0, 1080, 720);
     }// </editor-fold>//GEN-END:initComponents
 
     private void bajarAlturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bajarAlturaActionPerformed
@@ -407,6 +379,7 @@ public class PanelMesa extends javax.swing.JPanel {
     private javax.swing.JButton botonVolver;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSlider jSlider1;
     private javax.swing.JLabel labelControlartemperatura;

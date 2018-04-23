@@ -32,15 +32,19 @@ public class PanelSobremesa extends javax.swing.JPanel {
         botonCafe = new javax.swing.JButton();
         botonPagar = new javax.swing.JButton();
         botonVolver = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setMaximumSize(new java.awt.Dimension(1080, 720));
         setMinimumSize(new java.awt.Dimension(1080, 720));
+        setLayout(null);
 
         botonCafe.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
         botonCafe.setText(" Pedir Café");
         botonCafe.setMaximumSize(new java.awt.Dimension(550, 150));
         botonCafe.setMinimumSize(new java.awt.Dimension(550, 150));
         botonCafe.setPreferredSize(new java.awt.Dimension(550, 150));
+        add(botonCafe);
+        botonCafe.setBounds(265, 175, 550, 150);
 
         botonPagar.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
         botonPagar.setText("Solicitar la Cuenta");
@@ -52,6 +56,8 @@ public class PanelSobremesa extends javax.swing.JPanel {
                 botonPagarActionPerformed(evt);
             }
         });
+        add(botonPagar);
+        botonPagar.setBounds(265, 425, 550, 150);
 
         botonVolver.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         botonVolver.setText("Volver");
@@ -63,33 +69,12 @@ public class PanelSobremesa extends javax.swing.JPanel {
                 botonVolverActionPerformed(evt);
             }
         });
+        add(botonVolver);
+        botonVolver.setBounds(30, 615, 100, 75);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(botonVolver, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(265, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(botonPagar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botonCafe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(265, 265, 265))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(175, 175, 175)
-                .addComponent(botonCafe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(100, 100, 100)
-                .addComponent(botonPagar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
-                .addComponent(botonVolver, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/FramesCliente/imagenes/fondoPrincipal.png"))); // NOI18N
+        add(jLabel1);
+        jLabel1.setBounds(0, 0, 1080, 720);
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonPagarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPagarActionPerformed
@@ -113,5 +98,6 @@ public class PanelSobremesa extends javax.swing.JPanel {
     private javax.swing.JButton botonCafe;
     private javax.swing.JButton botonPagar;
     private javax.swing.JButton botonVolver;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
